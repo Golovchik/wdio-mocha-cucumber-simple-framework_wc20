@@ -1,0 +1,15 @@
+{
+  "name": "wdio-mocha-cucumber-simple-framework_wc20",
+  "version": "1.0.0",
+  "description": "AQA JavaScript TAF Lab Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.epam.com:Yauheni_Tsiarletski/wdio-mocha-cucumber-simple-framework_wc20.git"
+  },
+  "author": "Uladzislau_Halouchyk@epam.com",
+  "license": "ISC"
+}
