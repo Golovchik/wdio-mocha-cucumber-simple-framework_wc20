@@ -113,3 +113,21 @@ If you have run out of energy or time for your project, put a note at the top of
 5. created folder "steps" and "support" - for Step definitions
 6. created folder "tests" - it is Tests Layer (Tests, Feature files, Test data)
 7. created folder "features" - for Feature files
+
+## [TA] add linter to TAF (eslint or pritier, cucmber - gerkin lint)
+
+1. npm install eslint
+2. npx eslint --init
+3. How would you like to use ESLint? - To check syntax, find problems, and enforce code style
+4. What type of modules does your project use? - CommonJS (require/exports)
+5. Which framework does your project use? - None of these
+6. Does your project use TypeScript? - No
+7. Where does your code run? - Browser and Node
+8. How would you like to define a style for your project? - Use a popular style guide
+9. Which style guide do you want to follow? - Google: https://github.com/google/eslint-config-google
+10. What format do you want your config file to be in? - JSON
+11. as result, automatically was created file ./.eslintrc.json
+12. the line "type": "commonjs" , was added in file ./package.json
+13. the line "lint": "eslint ./ --fix" , was added in file ./package.json , in object "scripts".
+14. we can use "npm run lint", for fix our problem with formatting code.
+15. created file ".eslintignore"
