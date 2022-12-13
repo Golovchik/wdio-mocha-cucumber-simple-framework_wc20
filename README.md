@@ -116,6 +116,8 @@ If you have run out of energy or time for your project, put a note at the top of
 
 ## [TA] add linter to TAF (eslint or pritier, cucmber - gerkin lint)
 
+### eslint
+
 1. npm install eslint
 2. npx eslint --init
 3. How would you like to use ESLint? - To check syntax, find problems, and enforce code style
@@ -131,3 +133,10 @@ If you have run out of energy or time for your project, put a note at the top of
 13. the line "lint": "eslint ./ --fix" , was added in file ./package.json , in object "scripts".
 14. we can use "npm run lint", for fix our problem with formatting code.
 15. created file ".eslintignore"
+
+### gherkin-lint
+
+1. npm install gherkin-lint
+2. created file ".gherkin-lintrc.json" and filled out his rules.
+3. the line "gherkin-lint": "gherkin-lint -c .gherkin-lintrc ./tests/features/" , was added in file ./package.json , in object "scripts".
+4. we can use "npm run gherkin-lint", for to see our problem with formatting code with gherkin syntax.
