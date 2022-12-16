@@ -140,3 +140,22 @@ If you have run out of energy or time for your project, put a note at the top of
 2. created file ".gherkin-lintrc.json" and filled out his rules.
 3. the line "gherkin-lint": "gherkin-lint -c .gherkin-lintrc ./tests/features/" , was added in file ./package.json , in object "scripts".
 4. we can use "npm run gherkin-lint", for to see our problem with formatting code with gherkin syntax.
+
+
+
+
+
+
+## [TA] add WDIO to TAF 
+
+1. npm init wdio
+2. Where should your tests be launched? -local   > for e2e testing of web and mobile applications
+3. Where is your automation backend located?   > On my local machine 
+4. Which framework do you want to use?     >  Mocha (https://mochajs.org/)
+5. Do you want to use a compiler?  > No!
+6. Do you want WebdriverIO to autogenerate some test files?  > n
+7. Which reporter do you want to use?  > spec
+8. Do you want to add a plugin to your test setup? >  wait-for
+9. Do you want to add a service to your test setup?   ❯ chromedriver
+10. What is the base url?  >  https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard
+11. Do you want me to run `npm install`?    >  Y
