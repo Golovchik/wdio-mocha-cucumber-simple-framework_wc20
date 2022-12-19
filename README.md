@@ -158,3 +158,6 @@ If you have run out of energy or time for your project, put a note at the top of
 ## [TA] add allure config
 
 1.  npm install @wdio/allure-reporter --save-dev.
+## [TA] add winston
+
+1. npm i winston --save-dev.
