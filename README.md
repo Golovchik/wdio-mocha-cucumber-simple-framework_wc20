@@ -155,6 +155,9 @@ If you have run out of energy or time for your project, put a note at the top of
 10. What is the base url? > https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard
 11. Do you want me to run `npm install`? > Y
 
+## [TA] add allure config
+
+1.  npm install @wdio/allure-reporter --save-dev.
 ## [TA] add winston
 
 1. npm i winston --save-dev.
