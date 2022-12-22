@@ -158,6 +158,17 @@ If you have run out of energy or time for your project, put a note at the top of
 ## [TA] add allure config
 
 1.  npm install @wdio/allure-reporter --save-dev.
+
 ## [TA] add winston
 
 1. npm i winston --save-dev.
+
+## [TA] add TAF structure (base PO)
+
+1. created in folder "pages" files: (base,dashboard,schedule\_.page.js, index.js.
+2. created in folder "components/common" files: (base,header,sidemenu).component.js
+3. created in folder "components/dashboard" files: (consultation,todaysAppointnments).component.js
+4. created in folder "components/schedule" files: (bodyOfTable,headerOfTable).component.js
+5. created in folder "steps/dashboard" files: (given,then,when).js
+6. created in folder "tests/features/navigation" files: (menuNavigation).feature
+7. created in folder "tests/specs" files: e2e.spec.js (for simple testing)
