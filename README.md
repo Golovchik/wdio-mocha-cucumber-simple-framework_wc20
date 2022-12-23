@@ -173,10 +173,10 @@ If you have run out of energy or time for your project, put a note at the top of
 
 ## [TA] add TAF structure (base PO)
 
-1. Created in folder "pages" files: (base,dashboard,schedule\_.page.js, index.js.
+1. Created in folder "pages" files: (base,about,dashboard,doctors,patients,preference,schedule).page.js, index.js.
 2. Created in folder "components/common" files: (base,header,sidemenu).component.js
-3. created in folder "components/dashboard" files: (consultation,todaysAppointnments).component.js
-4. Created in folder "components/schedule" files: (bodyOfTable,headerOfTable).component.js
+3. created in folder "components/dashboard" files: (consultation,doctorsAvailability,todaysAppointnments).component.js
+4. Created in folder "components/schedule" files: (chooseSpecialist,filter,slot,waitingList).component.js
 5. Created in folder "steps/dashboard" files: (given,then,when).js
-6. created in folder "tests/features/navigation" files: (menuNavigation).feature
+6. created in folder "tests/features" files: (menuNavigation).feature
 7. Created in folder "tests/specs" files: e2e.spec.js (for simple testing)

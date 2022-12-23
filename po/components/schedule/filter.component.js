@@ -1,6 +1,6 @@
 const BaseComponent = require('../common/base.component');
 
-class HeaderOfTableComponent extends BaseComponent {
+class FilterComponent extends BaseComponent {
   constructor() {
     super('.e-toolbar-items');
   }
@@ -22,4 +22,4 @@ class HeaderOfTableComponent extends BaseComponent {
   }
 }
 
-module.exports = HeaderOfTableComponent;
+module.exports = FilterComponent;
