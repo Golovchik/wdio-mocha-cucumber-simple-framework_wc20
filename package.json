@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./ --fix",
     "gherkin-lint": "gherkin-lint -c .gherkin-lintrc ./tests/features/",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,10 @@
     "@wdio/mocha-framework": "^8.0.13",
     "@wdio/spec-reporter": "^8.0.13",
     "chromedriver": "^108.0.0",
+    "cucumber": "^6.0.7",
     "eslint": "^8.29.0",
     "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.2",
     "wdio-chromedriver-service": "^8.0.1",
     "winston": "^3.8.2"
   },
