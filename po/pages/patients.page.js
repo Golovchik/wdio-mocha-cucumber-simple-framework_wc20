@@ -1,15 +1,18 @@
 const BasePage = require("./base.page");
 
 class PatientsPage extends BasePage {
-  get SearchPatientString() {
-    return $("editing-view-port");
+  constructor(url) {
+    super(url);
+    this.patientQueryPart = "//*[text()";
+    this.searchPatientString = "editing-view-port";
+    this.addNewButton = "//*[@class='add-patient-label']";
+    this.patientName = "//*[@class='patient-name']";
   }
-  get AddNewButton() {
-    return $("//*[@class='add-patient-label']");
+
+  getPatient(name) {
+    return this.rootEl.$(`${patientQueryPart}='${name}']`);
   }
-  get tablePatients() {
-    return $("//div[@class='e-headercontent']//table[@class='e-table']");
-  }
+  
 }
 
 module.exports = PatientsPage;
