@@ -1,2 +1,3 @@
+#https://www.atlassian.com/ru/git/tutorials/saving-changes/gitignore
 node_modules
 .env

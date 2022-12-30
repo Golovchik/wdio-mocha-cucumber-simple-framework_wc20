@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./ --fix",
     "gherkin-lint": "gherkin-lint -c .gherkin-lintrc ./tests/features/",
-    "wdio": "wdio run ./wdio.conf.js",
+    "wdio": "wdio run ./configs/wdio.conf.js",
+    "wdio:cucumber": "wdio run ./configs/wdio.cucumber.conf.js",
     "prepare": "husky install"
   },
   "repository": {
