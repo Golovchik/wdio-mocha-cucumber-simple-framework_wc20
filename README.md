@@ -181,6 +181,8 @@ If you have run out of energy or time for your project, put a note at the top of
 ## [TA] add cucumber-framework module to TAF
 
 1. npm install @wdio/cucumber-framework --save-dev
+2. created file wdio.cucumber.conf.js
+3. moved files wdio.\*\conf.js to configs
 
 ## [TA] add TAF structure (base PO)
 
