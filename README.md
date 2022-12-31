@@ -171,6 +171,19 @@ If you have run out of energy or time for your project, put a note at the top of
 4. Used dotenv in file wdio.conf.js
 5. Added ".env" in file wdio.conf.js
 
+## [TA] add husky module to TAF
+
+1. npm set-script prepare "husky install"
+2. npm run prepare
+3. npx husky add .husky/pre-commit “npm run lint”
+4. added a line in file .husky/ pre-commit: npm run gherkin-lint
+
+## [TA] add cucumber-framework module to TAF
+
+1. npm install @wdio/cucumber-framework --save-dev
+2. created file wdio.cucumber.conf.js
+3. moved files wdio.\*\conf.js to configs
+
 ## [TA] add TAF structure (base PO)
 
 1. Created in folder "pages" files: (base,about,dashboard,doctors,patients,preference,schedule).page.js, index.js.
