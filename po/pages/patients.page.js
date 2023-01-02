@@ -9,7 +9,6 @@ const DeletePatientModalComponent = require('../components/patients/deletePatien
 class PatientsPage extends BasePage {
   constructor(url) {
     super('/showcase/angular/appointmentplanner/#/patients');
-
     this.newPatientModal = new ChangePatientModalComponent();
     this.editPatientModal = new ChangePatientModalComponent();
     this.listHeader = new ListHeaderComponent();

@@ -1,5 +1,5 @@
-const HeaderComponent = require('../components/common/header.component');
-const SideMenuComponent = require('../components/common/sidemenu.component');
+const HeaderComponent = require("../components/common/header.component");
+const SideMenuComponent = require("../components/common/sidemenu.component");
 
 class BasePage {
   constructor(url) {
@@ -8,8 +8,12 @@ class BasePage {
     this.sideMenu = new SideMenuComponent();
   }
 
-  open() {
-    return browser.url(this.url);
+  async open() {
+    await browser.url(this.url);
+  }
+
+  async getPageUrl() {
+    await browser.getUrl();
   }
 }
 
