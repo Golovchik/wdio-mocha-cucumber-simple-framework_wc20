@@ -17,6 +17,10 @@ class SideMenuComponent extends BaseComponent {
     const selectors = {
       dashboard: '.dashboard',
       schedule: '.calendar',
+      doctors: '.doctors',
+      patients: '.patients',
+      preference: '.preference',
+      about: '.about',
     };
     return this.rootEl.$(selectors[name.toLowerCase()]);
   }
