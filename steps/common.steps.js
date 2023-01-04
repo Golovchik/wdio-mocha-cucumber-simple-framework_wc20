@@ -19,9 +19,9 @@ Then(/^I should have page url '([^"]*)'$/, async (url) => {
 
 // Then I should see modal dialog with title 'New Doctor' on page 'Doctors'
 Then(
-    /^Then I should see modal dialog with title '([^"]*)' on page '([^"]*)'$/,
+    /^I should see modal dialog with title '([^"]*)' on page '([^"]*)'$/,
     async (title, pageName) => {
-      const currenTitle = await page(pageName).changeDoctorModal.title;
+      const currenTitle = await page(pageName).newDoctorModal.title.getText();
       await expect(currenTitle).toEqual(title);
     },
 );
