@@ -9,8 +9,6 @@ Feature: Doctors
         When I click on the button 'Add new doctor' in a 'header list'
         Then I should see modal dialog with title 'New Doctor' on page 'Doctors'
 
-# Example: I click on the element 'el' on page 'pa' on component 'co'
-
 # When I enter 'Uladzislau' in 'Doctor Name' input
 #And I click 'Male' in 'Gender' input
 #And I enter '(111) 111-1111' in 'Gender' input

@@ -11,6 +11,14 @@ When(/^I click on the '([^"]*)' item in the menu$/, async (menuItem) => {
   await page('Base').sideMenu.item(menuItem).click();
 });
 
+// When I click on the element 'el' on page 'pa' on component 'co'
+When(
+    /^I click on the element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (el, pg, comp) => {
+      await page(pg)[comp].item(el).click();
+    },
+);
+
 // Then I should have page url "pageUrl"
 Then(/^I should have page url '([^"]*)'$/, async (url) => {
   const currentUrl = await page('Base').getPageUrl();
