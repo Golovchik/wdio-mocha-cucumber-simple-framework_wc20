@@ -8,16 +8,15 @@ class ChangePatientModalComponent extends DialogModalComponent {
   input(name) {
     const selectors = {
       name: 'input[name=Name]',
-      genderMale: 'input[value=Male]',
-      genderFemale: 'input[value=Female]',
+      genderMale: 'label[for=patientCheckMale]',
+      genderFemale: 'label[for=patientCheckFemale]',
       dob: '.e-date-icon',
       bloodGroup: '#.e-ddl-icon',
       mobile: '#PatientMobile',
       email: 'input[name=Email]',
       symptoms: 'input[name=Symptoms]',
     };
-
-    return this.rootEl.$(selectors[name.toLowerCase()]);
+    return this.rootEl.$(selectors[name]);
   }
 }
 

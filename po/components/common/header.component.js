@@ -5,12 +5,12 @@ class HeaderComponent extends BaseComponent {
     super('.planner-header');
   }
 
-  get logoutBtn() {
-    return this.rootEl.$('.logout-container');
-  }
-
-  get githubBtn() {
-    return this.rootEl.$('#github');
+  item(name) {
+    const selectors = {
+      logout: '.logout-container',
+      github: '#github',
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 

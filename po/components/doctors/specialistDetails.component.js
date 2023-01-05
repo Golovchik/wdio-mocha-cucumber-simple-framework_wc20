@@ -5,24 +5,15 @@ class SpecialistDetailsComponent extends BaseComponent {
     super('app-doctor-details');
   }
 
-  get deleteBtn() {
-    return this.rootEl.$('button.delete-details');
-  }
-
-  get editBtn() {
-    return this.rootEl.$('button.edit-details');
-  }
-
-  get addBreakHoursBtn() {
-    return this.rootEl.$('.add-container button.e-primary');
-  }
-
   getBreakHours(day) {
     return this.rootEl.$(`//div[text()='${day}']/following-sibling::div`);
   }
 
   info(name) {
     const selectors = {
+      delete: 'button.delete-details',
+      edit: 'button.edit-details',
+      addBreakHours: '.add-container button.e-primary',
       name: '.name',
       education: '.education',
       designation: '.designation',
@@ -31,7 +22,7 @@ class SpecialistDetailsComponent extends BaseComponent {
       availability: '.available-days',
       mobile: '.mobile',
     };
-    return this.rootEl.$(selectors[name.toLowerCase()]);
+    return this.rootEl.$(selectors[name]);
   }
 }
 

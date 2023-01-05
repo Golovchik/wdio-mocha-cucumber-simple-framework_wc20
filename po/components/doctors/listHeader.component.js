@@ -5,8 +5,11 @@ class ListHeaderComponent extends BaseComponent {
     super('.specialization-types');
   }
 
-  get addNewDoctorBtn() {
-    return this.rootEl.$('button.e-control');
+  item(name) {
+    const selectors = {
+      addNewDoctor: 'button.e-control',
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 
