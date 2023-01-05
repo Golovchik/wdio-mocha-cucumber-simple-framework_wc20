@@ -8,7 +8,6 @@ Feature: Doctors
     Scenario: Creating a new doctor
         When I click on the button "Add new doctor" in a header
         Then I should see modal dialog with title "New Doctor"
-
         When I enter 'Uladzislau' in 'Doctor Name' input
         And I click 'Male' in 'Gender' input
         And I enter '(111) 111-1111' in 'Gender' input
@@ -18,3 +17,11 @@ Feature: Doctors
         And I enter 'Practitioner' in 'Designation' input
         And I click button 'Save'
         Then I should see a new doctor with name 'Uladzislau'
+
+
+      Scenario: Check doctor details
+        When I click on the string "Select a Specialization" in a header
+        When I click on 'Neurology' in window of specialization
+        And I click 'Dr.Mollie Cobb' in 'Doctors list' in a header
+        Then I should see 'Doctors details' about 'Dr. Mollie Cobb'
+
