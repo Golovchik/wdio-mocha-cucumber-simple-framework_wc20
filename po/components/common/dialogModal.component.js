@@ -5,6 +5,10 @@ class DialogModalComponent extends BaseComponent {
     super('ejs-dialog');
   }
 
+  get title() {
+    return this.rootEl.$('#_title');
+  }
+
   get closeBtn() {
     return this.rootEl.$('.e-dlg-closeicon-btn');
   }
