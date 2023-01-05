@@ -1,10 +1,11 @@
 const {Given, When, Then} = require('@cucumber/cucumber');
 const {page} = require('../po/pages/index');
 const {
-  getConvertTextToVariable,
   selectItemInList,
   setValueInElement,
-} = require('../support/helper');
+} = require('../support/actions/cooperations');
+const {checkElementIsDisplayed} = require('../support/assertions/expects');
+const {getConvertTextToVariable} = require('../support/helpers');
 
 // Given/When I open the browser is at the "Dashboard" page
 Given(/^I open the browser is at the '([^"]*)' page$/, async (pg) => {
@@ -65,5 +66,13 @@ Then(
       comp = await getConvertTextToVariable(comp);
       const currenTitle = await page(pg)[comp].title.getText();
       await expect(currenTitle).toEqual(title);
+    },
+);
+
+// Then I should see element 'Name' with 'Uladzislau' on page 'Doctors' on component 'Specialist Card'
+Then(
+    /^I should see element '([^"]*)' with '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (el, text, pg, comp) => {
+      await checkElementIsDisplayed(el, text, pg, comp);
     },
 );

@@ -1,8 +1,8 @@
 @Uladzislau_1
 Feature: Menu Navigation
 
-    As a user, I want to be able to navigate through out the website
-    using the menu links to get to various pages
+    #As a user, I want to be able to navigate through out the website
+    #using the menu links to get to various pages
 
     Background:
         Given I open the browser is at the 'Dashboard' page

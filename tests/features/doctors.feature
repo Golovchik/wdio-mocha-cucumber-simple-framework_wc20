@@ -16,4 +16,4 @@ Feature: Doctors
         And  I click on '5+ years' element in 'Experience' list on page 'Doctors' on component 'New Doctor Modal'
         And  I enter 'Practitioner' into element 'Designation' on page 'Doctors' on component 'New Doctor Modal'
         And  I click button 'Save' on page 'Doctors' on component 'New Doctor Modal'
-# Then I should see a new doctor with name 'Uladzislau'
+        Then I should see 'Dr. Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
