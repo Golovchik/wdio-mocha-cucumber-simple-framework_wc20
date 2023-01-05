@@ -1,15 +1,15 @@
-@1
+@Uladzislau_1
 Feature: Menu Navigation
 
     As a user, I want to be able to navigate through out the website
     using the menu links to get to various pages
 
     Background:
-        Given I open the browser is at the "Dashboard" page
+        Given I open the browser is at the 'Dashboard' page
 
     Scenario Outline: Navigating through the main menu items from the dashboard page
-        When I click on the "<menuItem>" item in the menu
-        Then I should have page url "<pageUrl>"
+        When I click on the '<menuItem>' item in the menu
+        Then I should have page url '<pageUrl>'
 
         Examples:
             | menuItem   | pageUrl                                                                     |
