@@ -20,9 +20,10 @@ Feature: Doctors
 # Then I should see a new doctor with name 'Uladzislau'
 
 
-      Scenario: Check doctor details
-        When I click on the string "Select a Specialization" in a header
-        When I click on 'Neurology' in window of specialization
-        And I click 'Dr.Mollie Cobb' in 'Doctors list' in a header
-        Then I should see 'Doctors details' about 'Dr. Mollie Cobb'
+    Scenario: Check doctor details
+        When I click on the the 'Select a Specialization' in a 'header list'
+        When I click on the 'Neurology' on the page 'Doctors' on component 'Select a Specialization'
+        And I click on the 'Dr.Mollie Cobb' on the page 'Doctors' on 'Doctors list' 
+        Then I should see modal dialog with title 'Doctors details' on the page 'Doctors'
+        
 

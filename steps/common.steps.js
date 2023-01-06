@@ -34,8 +34,44 @@ Then(
   }
 );
 
-// Then I write text on element
-Then(/^I write text '([^"]*)' on element'([^"]*)'$/, async (text, element) => {
-  await element.waitForExist(5000);
+// When I write text on element
+When(/^I write text '([^"]*)' on element'([^"]*)'$/, async (text, element) => {
+  await element.waitForExist(3000);
   await element.addValue(text);
 });
+
+//When I write text and push Enther button
+When(
+  /^I write text '([^"]*)' on element'([^"]*)'$ and push Enter button/,
+  async (element, text) => {
+    await element.waitForExist(3000);
+    await element.addValue(text);
+    await element.keys("\uE007");
+  }
+);
+
+//When I click on element
+When(/^I click on element '([^"]*)'$/, async (element) => {
+  await element.waitForExist(3000);
+  await element.click();
+});
+
+//When I select element on droplist
+When(
+  /^I select element '([^"]*)'$ on droplist '([^"]*)'$/,
+  async (droplist, element) => {
+    await droplist.waitForExist(3000);
+    await droplist.click();
+    await element.waitForExist(3000);
+    await element.click();
+  }
+);
+
+//Then I shoud see element  on component
+Then(
+  /^Then I shoud see element '([^"]*)' on component '([^"]*)'$/,
+  async (element, text) => {
+    await element.waitForExist(3000);
+    await expect(element).toHaveTextContaining(text);
+  }
+);
