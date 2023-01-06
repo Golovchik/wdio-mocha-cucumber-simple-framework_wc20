@@ -23,8 +23,8 @@ class DoctorsPage extends BasePage {
     //
   }
 
-  specialistCard(id) {
-    return new SpecialistCardComponent(id);
+  specialistCard(name) {
+    return new SpecialistCardComponent(name);
   }
 
   //

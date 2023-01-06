@@ -5,16 +5,9 @@ class SideMenuComponent extends BaseComponent {
     super('#plannerSiderBar');
   }
 
-  get name() {
-    return this.rootEl.$('p.name');
-  }
-
-  get userType() {
-    return this.rootEl.$('p.user-type');
-  }
-
   item(name) {
     const selectors = {
+      name: 'p.name',
       dashboard: '.dashboard',
       schedule: '.calendar',
       doctors: '.doctors',
@@ -22,7 +15,8 @@ class SideMenuComponent extends BaseComponent {
       preference: '.preference',
       about: '.about',
     };
-    return this.rootEl.$(selectors[name.toLowerCase()]);
+    // return this.rootEl.$(selectors[name.toLowerCase()]);
+    return this.rootEl.$(selectors[name]);
   }
 }
 

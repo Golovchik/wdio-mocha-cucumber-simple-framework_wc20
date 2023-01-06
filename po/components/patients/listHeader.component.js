@@ -5,8 +5,11 @@ class ListHeaderComponent extends BaseComponent {
     super('.patient-operations');
   }
 
-  get addNewPatientBtn() {
-    return this.rootEl.$('button.e-control');
+  item(name) {
+    const selectors = {
+      addNewPatien: 'button.e-control',
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 

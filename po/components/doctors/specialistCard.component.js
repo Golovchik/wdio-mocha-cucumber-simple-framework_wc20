@@ -1,16 +1,18 @@
 const BaseComponent = require('../common/base.component');
 
 class SpecialistCardComponent extends BaseComponent {
-  constructor(id) {
-    super(`#Specialist_${id}`);
+  constructor(name) {
+    super(
+        `//div[@class='name'][text()='${name}']//ancestor::div[@class='e-cards specialist-item']`,
+    );
   }
 
-  get name() {
-    return this.rootEl.$('.name');
-  }
-
-  get education() {
-    return this.rootEl.$('.education');
+  item(name) {
+    const selectors = {
+      name: '.name',
+      education: '.education',
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 

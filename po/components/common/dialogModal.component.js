@@ -9,26 +9,16 @@ class DialogModalComponent extends BaseComponent {
     return this.rootEl.$('#_title');
   }
 
-  get closeBtn() {
+  get close() {
     return this.rootEl.$('.e-dlg-closeicon-btn');
   }
 
-  get cancelBtn() {
+  get cancel() {
     return this.rootEl.$('.button-container button.e-btn:not(.e-primary)');
   }
 
-  get saveBtn() {
+  get save() {
     return this.rootEl.$('.button-container button.e-primary');
-  }
-
-  async clickButton(button) {
-    if (button.toLocaleLowerCase() === 'save') {
-      await this.saveBtn.click();
-    } else if (button.toLocaleLowerCase() === 'cancel') {
-      await this.cancelBtn.click();
-    } else {
-      await this.closeBtn.click();
-    }
   }
 }
 

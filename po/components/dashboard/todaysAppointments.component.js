@@ -5,8 +5,11 @@ class TodaysAppointmentsComponent extends BaseComponent {
     super('.grid-container');
   }
 
-  get bookAppointmentsLink() {
-    return this.rootEl.$(`[href="#/calendar"]`);
+  item(name) {
+    const selectors = {
+      bookAppointmentsLink: `[href="#/calendar"]`,
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 
