@@ -1,4 +1,4 @@
-@Uladzislau_2
+@Uladzislau_2 @Uladzislau_
 Feature: Doctors
 
     Background:
@@ -15,5 +15,6 @@ Feature: Doctors
         And  I enter '1234' into element 'Education' on page 'Doctors' on component 'New Doctor Modal'
         And  I click on '5+ years' element in 'Experience' list on page 'Doctors' on component 'New Doctor Modal'
         And  I enter 'Practitioner' into element 'Designation' on page 'Doctors' on component 'New Doctor Modal'
-        And  I click button 'Save' on page 'Doctors' on component 'New Doctor Modal'
+        #And  I click button 'Save' on page 'Doctors' on component 'New Doctor Modal'
+        And  I click on the element 'Save' on page 'Doctors' on component 'New Doctor Modal'
         Then I should see 'Dr. Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
