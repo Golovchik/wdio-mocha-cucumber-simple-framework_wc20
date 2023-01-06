@@ -69,10 +69,10 @@ Then(
   }
 );
 
-// Then I should see element 'Name' with 'Uladzislau' on page 'Doctors' on component 'Specialist Card'
+// Then I should see element 'Name' on page 'Doctors' on component 'Specialist Card'
 Then(
-  /^I should see element '([^"]*)' with '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
-  async (element, text, page, component) => {
-    await checkElementIsDisplayed(element, text, page, component);
+  /^I should see element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+  async (element, page, component) => {
+    await checkElementIsDisplayed(element, page, component);
   }
 );
