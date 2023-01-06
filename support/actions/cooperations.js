@@ -1,4 +1,4 @@
-const {page} = require('../../po/pages/index');
+const {pageFactory} = require('../../po/pages/index');
 
 const {getConvertTextToVariable} = require('../helpers');
 
@@ -7,20 +7,20 @@ const clickElementWithWait = async (element) => {
   await element.click();
 };
 
-const selectItemInList = async (el, lst, pg, comp) => {
+const selectItemInList = async (element, lst, page, component) => {
   lst = await getConvertTextToVariable(lst);
-  comp = await getConvertTextToVariable(comp);
-  const currentComponent = await page(pg)[comp];
+  component = await getConvertTextToVariable(component);
+  const currentComponent = await pageFactory(page)[component];
   const lstElement = await currentComponent.item(lst);
   await clickElementWithWait(lstElement);
-  const itemElement = await currentComponent.getItemList(el);
+  const itemElement = await currentComponent.getItemList(element);
   await clickElementWithWait(itemElement);
 };
 
-const setValueInElement = async (text, el, pg, comp) => {
-  el = await getConvertTextToVariable(el);
-  comp = await getConvertTextToVariable(comp);
-  await page(pg)[comp].item(el).setValue(text);
+const setValueInElement = async (text, element, page, component) => {
+  element = await getConvertTextToVariable(element);
+  component = await getConvertTextToVariable(component);
+  await pageFactory(page)[component].item(element).setValue(text);
 };
 
 module.exports = {
