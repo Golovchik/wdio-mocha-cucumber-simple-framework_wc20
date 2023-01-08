@@ -6,7 +6,6 @@ Feature: About
         And I click on the 'About' item in the menu
 
     Scenario Outline: Navigating through the list components from the about page
-        #When I click on the '<componentItem>' item in the menu
         When I click on the element '<componentItem>' on page 'About' on component 'List Components'
         Then I should have new page with url '<pageUrl>'
 

@@ -1,11 +1,11 @@
 const {Given, When, Then} = require('@cucumber/cucumber');
 const {
   getElement,
-  //  getComponent,
   getPage,
   clickElementWithWait,
   selectItemInList,
   setValueInElement,
+  getValueFromElement,
 } = require('../support/actions/cooperations');
 const {checkElementIsDisplayed} = require('../support/assertions/expects');
 
@@ -69,5 +69,13 @@ Then(
     async (element, page, component) => {
       const currentElement = await getElement(element, page, component);
       await checkElementIsDisplayed(currentElement);
+    },
+);
+
+Then(
+    /^I should see text '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (text, element, page, component) => {
+      const currentText = await getValueFromElement(element, page, component);
+      await expect(currentText).toEqual(text);
     },
 );
