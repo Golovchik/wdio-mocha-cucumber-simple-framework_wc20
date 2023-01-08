@@ -6,7 +6,8 @@ class ListComponentsComponent extends BaseComponent {
   }
 
   item(name) {
-    return this.rootEl.$(`//a[text()='${name}`);
+    const newName = name[0].toUpperCase() + name.slice(1);
+    return this.rootEl.$(`//a[text()='${newName}']`);
   }
 }
 

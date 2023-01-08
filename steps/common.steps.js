@@ -1,5 +1,4 @@
 const {Given, When, Then} = require('@cucumber/cucumber');
-const {pageFactory} = require('../po/pages/index');
 const {
   getElement,
   //  getComponent,
@@ -26,9 +25,6 @@ When(/^I click on the '([^"]*)' item in the menu$/, async (element) => {
 When(
     /^I click on the element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
-    // element = await getConvertTextToVariable(element);
-    // component = await getConvertTextToVariable(component);
-    // await pageFactory(page)[component].item(element).click();
       const currentElement = await getElement(element, page, component);
       await clickElementWithWait(currentElement);
     },
@@ -52,7 +48,8 @@ When(
 
 // Then I should have page url "pageUrl"
 Then(/^I should have page url '([^"]*)'$/, async (url) => {
-  const currentUrl = await pageFactory('Base').getPageUrl();
+  const currentPage = await getPage('Base');
+  const currentUrl = await currentPage.getPageUrl();
   await expect(currentUrl).toEqual(url);
 });
 

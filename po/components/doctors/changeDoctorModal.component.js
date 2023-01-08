@@ -17,7 +17,6 @@ class ChangeDoctorModalComponent extends DialogModalComponent {
       phone: 'input#DoctorMobile',
       email: 'input[name="Email"]',
       education: 'input[name="Education"]',
-      // experience: 'select[name="Experience"]',
       experience: 'div[aria-owns="Experience_options"]',
       designation: 'input[name="Designation"]',
     };

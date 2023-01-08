@@ -2,7 +2,6 @@ const BaseComponent = require('./base.component');
 
 class DialogModalComponent extends BaseComponent {
   constructor(url) {
-    // super('ejs-dialog');
     super(url);
   }
 

@@ -7,9 +7,14 @@ const clickElementWithWait = async (element) => {
   await element.click();
 };
 
+const doubleClickElementWithWait = async (element) => {
+  await element.waitForClickable({timeout: 5000});
+  await element.doubleClick();
+};
+
 const getElement = async (element, page, component) => {
   element = await getConvertTextToVariable(element);
-  component = await getConvertTextToVariable(component);
+  // component = await getConvertTextToVariable(component);
   const currentComponent = await getComponent(page, component);
   const currentElement = await currentComponent.item(element);
   return currentElement;
@@ -29,7 +34,7 @@ const getPage = async (page) => {
 const selectItemInList = async (element, lst, page, component) => {
   lst = await getConvertTextToVariable(lst);
   component = await getConvertTextToVariable(component);
-  const currentComponent = await pageFactory(page)[component];
+  const currentComponent = await getComponent(page, component);
   const lstElement = await currentComponent.item(lst);
   await clickElementWithWait(lstElement);
   const itemElement = await currentComponent.getItemList(element);
@@ -39,12 +44,14 @@ const selectItemInList = async (element, lst, page, component) => {
 const setValueInElement = async (text, element, page, component) => {
   element = await getConvertTextToVariable(element);
   component = await getConvertTextToVariable(component);
-  await pageFactory(page)[component].item(element).setValue(text);
+  const currentElement = await getElement(element, page, component);
+  await currentElement.setValue(text);
 };
 
 module.exports = {
   getConvertTextToVariable,
   clickElementWithWait,
+  doubleClickElementWithWait,
   getElement,
   getComponent,
   getPage,

@@ -23,8 +23,8 @@ class PatientsPage extends BasePage {
     //
   }
 
-  clientCard(id) {
-    return new ClientCardComponent(id);
+  clientCard(number) {
+    return new ClientCardComponent(number);
   }
 
   //

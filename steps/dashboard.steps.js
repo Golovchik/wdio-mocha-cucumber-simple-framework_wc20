@@ -1,8 +1,6 @@
 const {Then} = require('@cucumber/cucumber');
-// const {pageFactory} = require('../po/pages/index');
 const {getComponent} = require('../support/actions/cooperations');
 const {checkElementIsDisplayed} = require('../support/assertions/expects');
-// const {getConvertTextToVariable} = require('../support/helpers');
 
 // Then I should see availability doctor with name '' on page Dashboard on component 'Doctors Availability'
 Then(
