@@ -7,6 +7,7 @@ Feature: Menu Navigation
     Background:
         Given I open the browser is at the 'Dashboard' page
 
+    @Uladzislau
     Scenario Outline: Navigating through the main menu items from the dashboard page
         When I click on the '<menuItem>' item in the menu
         Then I should have page url '<pageUrl>'
