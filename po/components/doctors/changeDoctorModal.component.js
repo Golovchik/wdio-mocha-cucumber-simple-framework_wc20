@@ -5,16 +5,20 @@ class ChangeDoctorModalComponent extends DialogModalComponent {
     super('ejs-dialog.new-doctor-dialog');
   }
 
-  input(name) {
+  item(name) {
     const selectors = {
       name: '#Name input',
+      genderMale: 'label[for=patientCheckMale]',
+      genderFemale: 'label[for=patientCheckFemale]',
       phone: 'input#DoctorMobile',
       email: 'input[name="Email"]',
       education: 'input[name="Education"]',
+      // experience: 'select[name="Experience"]',
+      experience: 'div[aria-owns="Experience_options"]',
       designation: 'input[name="Designation"]',
     };
 
-    return this.rootEl.$(selectors[name.toLowerCase()]);
+    return this.rootEl.$(selectors[name]);
   }
 }
 

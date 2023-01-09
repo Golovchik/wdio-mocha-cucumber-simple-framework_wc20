@@ -1,14 +1,13 @@
-const config = require("./wdio.conf.js");
+const { config } = require("./wdio.conf.js");
 
-config.specs = ["../tests/**/features/.feature"];
-
+config.specs = ["../tests/features/**/*.feature"];
 config.framework = "cucumber";
 
 //
 // If you are using Cucumber you need to specify the location of your step definitions.
 config.cucumberOpts = {
   // <string[]> (file/dir) require files before executing features
-  require: ["../steps/**/*.steps.js"],
+  require: [__dirname + "/../steps/*.js"],
   // <boolean> show full backtrace for errors
   backtrace: false,
   // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -24,11 +23,11 @@ config.cucumberOpts = {
   // <boolean> fail if there are any undefined or pending steps
   strict: false,
   // <string> (expression) only execute the features or scenarios with tags matching the expression
-  tagExpression: "",
+  tagExpression: "@Uladzislau_2",
   // <number> timeout for step definitions
   timeout: 60000,
   // <boolean> Enable this config to treat undefined definitions as warnings.
   ignoreUndefinedDefinitions: false,
 };
 
-cucumberOpts: exports.config = config;
+exports.config = config;

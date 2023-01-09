@@ -2,15 +2,20 @@ const BaseComponent = require('../common/base.component');
 
 class ClientCardComponent extends BaseComponent {
   constructor(id) {
-    super(`//tbody/tr[@aria-rowindex='${id}']`);
+    super(`//tbody/tr/td[text()='${id}']`);
   }
 
-  get nameLink() {
-    return this.rootEl.$('.patient-name');
-  }
-
-  getItem(field) {
-    return this.rootEl.$(`td[aria-label$='${field}']`);
+  item(name) {
+    const selectors = {
+      id: 'ID',
+      name: 'Name',
+      gender: 'Gender',
+      bloodGroup: 'Blood Group',
+      symptoms: 'Symptoms',
+      mobileNumber: 'Mobile Number',
+      email: 'Email',
+    };
+    return this.rootEl.$(`td[aria-label$='${selectors[name]}']`);
   }
 }
 

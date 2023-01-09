@@ -6,6 +6,10 @@ class BaseComponent {
   get rootEl() {
     return $(this.rootSelector);
   }
+
+  getItemList(name) {
+    return $(`//li[text()='${name}']`);
+  }
 }
 
 module.exports = BaseComponent;

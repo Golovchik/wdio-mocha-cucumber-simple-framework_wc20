@@ -1,7 +1,8 @@
 @2
 Feature: User Flow on "Preference"
 
-    Background: Given I open the browser is at the "Dashboard" page
+    Background:
+        Given I open the browser is at the "Dashboard" page
 
     Scenario: Fill the fields on "Preference" page
 

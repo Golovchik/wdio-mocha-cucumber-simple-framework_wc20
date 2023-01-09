@@ -1,7 +1,8 @@
 @2
 Feature: Dashboard
 
-    Background: Given I open the browser is at the "Dashboard" page
+    Background:
+        Given I open the browser is at the "Dashboard" page
 
     Scenario: Check buttons, fields and cells on the "Dashboard" page
 

@@ -1,3 +1,4 @@
+const BasePage = require('./base.page');
 const DashboardPage = require('./dashboard.page');
 const SchedulePage = require('./schedule.page');
 const DoctorsPage = require('./doctors.page');
@@ -5,8 +6,9 @@ const PatientsPage = require('./patients.page');
 const PreferencePage = require('./preference.page');
 const AboutPage = require('./about.page');
 
-function page(name) {
+function pageFactory(name) {
   const items = {
+    base: new BasePage(),
     dashboard: new DashboardPage(),
     schedule: new SchedulePage(),
     doctors: new DoctorsPage(),
@@ -14,11 +16,12 @@ function page(name) {
     preference: new PreferencePage(),
     about: new AboutPage(),
   };
-  return items[name];
+  return items[name.toLowerCase()];
 }
 
 module.exports = {
-  page,
+  pageFactory,
+  BasePage,
   DashboardPage,
   SchedulePage,
   DoctorsPage,
