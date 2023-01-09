@@ -6,7 +6,7 @@ const PatientsPage = require('./patients.page');
 const PreferencePage = require('./preference.page');
 const AboutPage = require('./about.page');
 
-function page(name) {
+function pageFactory(name) {
   const items = {
     base: new BasePage(),
     dashboard: new DashboardPage(),
@@ -20,7 +20,7 @@ function page(name) {
 }
 
 module.exports = {
-  page,
+  pageFactory,
   BasePage,
   DashboardPage,
   SchedulePage,

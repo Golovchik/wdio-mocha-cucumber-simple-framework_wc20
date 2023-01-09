@@ -5,7 +5,7 @@ class SettingsComponent extends BaseComponent {
     super(`.preference-container`);
   }
 
-  input(name) {
+  item(name) {
     const selectors = {
       currentView: '#CurrentView',
       calendarStart: '#CalendarStart',
