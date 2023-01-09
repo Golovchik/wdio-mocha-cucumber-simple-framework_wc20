@@ -1,39 +1,32 @@
 const {Given, When, Then} = require('@cucumber/cucumber');
-const {pageFactory} = require('../po/pages/index');
 const {
+  getElement,
+  getPage,
+  clickElementWithWait,
   selectItemInList,
   setValueInElement,
+  getValueFromElement,
 } = require('../support/actions/cooperations');
 const {checkElementIsDisplayed} = require('../support/assertions/expects');
-const {getConvertTextToVariable} = require('../support/helpers');
 
 // Given/When I open the browser is at the "Dashboard" page
 Given(/^I open the browser is at the '([^"]*)' page$/, async (page) => {
-  await pageFactory(page).open();
+  const currentPage = await getPage(page);
+  await currentPage.open();
 });
 
 // When I click on the "menuItem" item in the menu
 When(/^I click on the '([^"]*)' item in the menu$/, async (element) => {
-  element = await getConvertTextToVariable(element);
-  await pageFactory('Base').sideMenu.item(element).click();
+  const currentElement = await getElement(element, 'Base', 'sideMenu');
+  await clickElementWithWait(currentElement);
 });
 
-// When  I click button 'Save' on page 'Doctors' on component 'New Doctor Modal'
-When(
-    /^I click button '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
-    async (element, page, component) => {
-      element = await getConvertTextToVariable(element);
-      component = await getConvertTextToVariable(component);
-      await pageFactory(page)[component][element].click();
-    },
-);
 // When I click on the element 'el' on page 'pa' on component 'co'
 When(
     /^I click on the element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
-      element = await getConvertTextToVariable(element);
-      component = await getConvertTextToVariable(component);
-      await pageFactory(page)[component].item(element).click();
+      const currentElement = await getElement(element, page, component);
+      await clickElementWithWait(currentElement);
     },
 );
 
@@ -55,16 +48,17 @@ When(
 
 // Then I should have page url "pageUrl"
 Then(/^I should have page url '([^"]*)'$/, async (url) => {
-  const currentUrl = await pageFactory('Base').getPageUrl();
+  const currentPage = await getPage('Base');
+  const currentUrl = await currentPage.getPageUrl();
   await expect(currentUrl).toEqual(url);
 });
 
-// Then I should see modal dialog with title 'New Doctor' on page 'Doctors' on component 'New Doctor Modal'
+// Then I should see modal dialog with title 'New Doctor' on page 'Doctors/Patients' on component 'New Doctor Modal'
 Then(
     /^I should see modal dialog with title '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (title, page, component) => {
-      component = await getConvertTextToVariable(component);
-      const currenTitle = await pageFactory(page)[component].title.getText();
+      const currentElement = await getElement('title', page, component);
+      const currenTitle = await currentElement.getText();
       await expect(currenTitle).toEqual(title);
     },
 );
@@ -73,6 +67,15 @@ Then(
 Then(
     /^I should see element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
-      await checkElementIsDisplayed(element, page, component);
+      const currentElement = await getElement(element, page, component);
+      await checkElementIsDisplayed(currentElement);
+    },
+);
+
+Then(
+    /^I should see text '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (text, element, page, component) => {
+      const currentText = await getValueFromElement(element, page, component);
+      await expect(currentText).toEqual(text);
     },
 );

@@ -5,9 +5,14 @@ class DoctorsAvailabilityComponent extends BaseComponent {
     super('.doctor-availability');
   }
 
+  getDoctorByName(name) {
+    return this.rootEl.$(`//span[text() = '${name}']`);
+  }
+
   item(name) {
     const selectors = {
       viewAllLink: 'a[href=\'#/doctors\']',
+      listviewTemplate: '#listview_template',
     };
     return this.rootEl.$(selectors[name]);
   }
