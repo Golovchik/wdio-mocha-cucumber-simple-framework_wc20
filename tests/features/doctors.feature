@@ -1,8 +1,8 @@
 @Uladzislau_2
 Feature:'Doctors'
-  Background:
-    Given I open the browser is at the 'Dashboard' page
-    And I click on the 'Doctors' item in the menu
+    Background:
+        Given I open the browser is at the 'Dashboard' page
+        And I click on the 'Doctors' item in the menu
 
 
     Scenario: Creating a new doctor
@@ -21,7 +21,7 @@ Feature:'Doctors'
         Then I should see 'Dr. Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
 
 
-   Scenario: Change Doctor
+    Scenario: Change Doctor
 
         When I click on the element 'Specialist Detail' on page 'Doctors' on component 'Specialist Card'
         Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
@@ -32,5 +32,13 @@ Feature:'Doctors'
         Then I should see '1111111111' into elements 'Mobile' on page 'Doctors' on component 'Specialist Details'
 
 
- # Scensrio: Delete doctor
+    Scenario: Delete Doctor
+
+        When I click on the element 'Specialist Detail' on page 'Doctors' on component 'Specialist Card'
+        Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
+        And I click on the element 'Delete' on page 'Doctors' on component 'Specialist Details'
+        And I click on the element 'ok' on 'Doctors' on component 'Delete Doctor Modal'
+        Then I should'nt see element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/
+
+
 
