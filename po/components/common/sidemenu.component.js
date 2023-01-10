@@ -15,7 +15,6 @@ class SideMenuComponent extends BaseComponent {
       preference: '.preference',
       about: '.about',
     };
-    // return this.rootEl.$(selectors[name.toLowerCase()]);
     return this.rootEl.$(selectors[name]);
   }
 }

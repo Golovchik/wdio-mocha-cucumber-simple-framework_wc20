@@ -7,13 +7,16 @@ class ChangeDoctorModalComponent extends DialogModalComponent {
 
   item(name) {
     const selectors = {
+      title: this.title,
+      close: this.close,
+      cancel: this.cancel,
+      save: this.save,
       name: '#Name input',
       genderMale: 'label[for=patientCheckMale]',
       genderFemale: 'label[for=patientCheckFemale]',
       phone: 'input#DoctorMobile',
       email: 'input[name="Email"]',
       education: 'input[name="Education"]',
-      // experience: 'select[name="Experience"]',
       experience: 'div[aria-owns="Experience_options"]',
       designation: 'input[name="Designation"]',
     };

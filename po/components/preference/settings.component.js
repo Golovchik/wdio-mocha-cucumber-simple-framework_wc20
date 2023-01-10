@@ -7,15 +7,22 @@ class SettingsComponent extends BaseComponent {
 
   item(name) {
     const selectors = {
-      currentView: '#CurrentView',
-      calendarStart: '#CalendarStart',
-      calendarEnd: '#CalendarEnd',
-      duration: '#Duration',
-      bookingColor: '#BookingColor',
-      firstDayOfWeek: '#FirstDayOfWeek',
+      currentView: '#CurrentView span',
+      calendarStart: '#CalendarStart span',
+      calendarEnd: '#CalendarEnd span',
+      duration: '#Duration span',
+      bookingColor: '#BookingColor span',
+      firstDayOfWeek: '#FirstDayOfWeek span',
+
+      currentViewInput: '#CurrentView input',
+      calendarStartInput: '#CalendarStart input',
+      calendarEndInput: '#CalendarEnd input',
+      durationInput: '#Duration input',
+      bookingColorInput: '#BookingColor input',
+      firstDayOfWeekInput: '#FirstDayOfWeek input',
     };
 
-    return this.rootEl.$(`${selectors[name.toLowerCase()]} span`);
+    return this.rootEl.$(`${selectors[name]}`);
   }
 }
 

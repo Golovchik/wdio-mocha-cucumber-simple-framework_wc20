@@ -3,7 +3,7 @@ const BaseComponent = require('../common/base.component');
 class SpecialistCardComponent extends BaseComponent {
   constructor(name) {
     super(
-        `//div[@class='name'][text()='${name}']//ancestor::div[@class='e-cards specialist-item']`,
+        `app-doctor-details`,
     );
   }
 
