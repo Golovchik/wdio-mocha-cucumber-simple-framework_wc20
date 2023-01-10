@@ -36,11 +36,14 @@ Then(
   /^I should see text '([^"]*)' into element '([^"]*)' and text '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
   async (nameText, nameElement, mobileText, page, component) => {
     const funcName = await getConvertTextToVariable(component);
-    const nameLocator = await pageFactory(page.toLowerCase())
-      [funcName](mobileText)
-      .item(nameElement.toLowerCase());
-    const text = await nameLocator.getText();
-    await expect(text).toEqual(nameText);
+    const uniqueRowAncestor = await pageFactory(page.toLowerCase())[funcName](
+      mobileText
+    );
+
+    const nameLocatorText = await uniqueRowAncestor
+      .item(nameElement.toLowerCase())
+      .getText();
+    await expect(nameLocatorText).toEqual(nameText);
   }
 );
 
