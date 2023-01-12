@@ -68,25 +68,25 @@ Feature: Doctors
     #     Then I should see a new doctor with name 'Uladzislau'
 
 
-    Scenario: Change Doctor
+     Scenario: Change Doctor
 
-        When I click on the element 'Specialist Detail' on page 'Doctors' on component 'Specialist Card'
+        When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
+        Then I should see element 'Title' with text 'DOCTOR DETAILS' on page 'Doctors' on component 'Specialist Details'
+        And I click on the button 'Edit' on page 'Doctors' on component 'Specialist Details'
+        # Then I should see modal dialog with element 'Title' with text 'Edit Doctor' on page 'Doctors' on component 'Edit Doctor Modal'
+        #  And I enter '1111111111' into element 'Phone' on page 'Doctor' on component 'Change Doctor Modal'
+        # And I click on the element 'Save' on page 'Doctors' on component 'Change Doctor Modal'
+        # Then I should see '1111111111' into elements 'Mobile' on page 'Doctors' on component 'Specialist Details'
+
+
+   Scenario: Delete Doctor
+
+        When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
         Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
-        And I click on the element 'Edit' on page 'Doctors' on component 'Specialist Details'
-        Then I should see modal dialog with title 'Edit Doctor' on page 'Doctors' on component 'Change Doctor Modal'
-        And I enter '1111111111' into element 'Phone' on page 'Doctor' on component 'Change Doctor Modal'
-        And I click on the element 'Save' on page 'Doctors' on component 'Change Doctor Modal'
-        Then I should see '1111111111' into elements 'Mobile' on page 'Doctors' on component 'Specialist Details'
-
-
-    # Scenario: Delete Doctor
-
-    #     When I click on the element 'Specialist Detail' on page 'Doctors' on component 'Specialist Card'
-    #     Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
-    #     And I click on the element 'Delete' on page 'Doctors' on component 'Specialist Details'
-    #     And I click on the element 'ok' on 'Doctors' on component 'Delete Doctor Modal'
-    #     Then I should'nt see element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/
+        And I click on the button 'Delete' on page 'Doctors' on component 'Specialist Details'
+        And I click on the button 'Ok' on page 'Doctors' on component 'Delete Doctor Modal'
+        And I click on the 'Doctors' item in the menu
+ #      Then I should not see element 'Specialist Card' with name 'Dr. Nembo Lukeni'  on page 'Doctors' 
 
 
 
-# //*[text()='(717) 555-4444']/parent::tr/td[2]

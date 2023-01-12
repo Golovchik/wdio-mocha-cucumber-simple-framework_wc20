@@ -86,9 +86,8 @@ Feature: User Flow on 'Patients' page
     #     Then I should see text 'Anna' into element 'Name' and text '(111) 111-1111' on page 'Patients' on component 'Client Card'
 
 
-   Scenario: Check Patients Details
+    Scenario: Check Patients Details
 
-       When I enter '(717) 555-4445' into element 'Search Patient' on page 'Patients' on component 'List Header'
-       Then I should see patient with mobile number '(717) 555-4445' on the element 'Name Link' on page 'Patients' on component 'ClientCard'
-       Then I should see for patients 'Milka' into elements 'Name' on page 'Patients' on component 'Client Details'
-       
+        When I enter '(717) 555-4445' into element 'Search Patient' on page 'Patients' on component 'List Header'
+        Then I should see patient with mobile number '(717) 555-4445' on the element 'Name Link' on page 'Patients' on component 'ClientCard'
+        Then I should see for patients 'Milka' into elements 'Name' on page 'Patients' on component 'Client Details'

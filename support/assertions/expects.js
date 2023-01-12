@@ -1,4 +1,4 @@
-const checkElementIsDisplayed = async (element) => {
+const checkElementIsDisplayed = async element => {
   await expect(element).toBeDisplayed();
 };
 

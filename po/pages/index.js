@@ -1,10 +1,10 @@
-const BasePage = require('./base.page');
-const DashboardPage = require('./dashboard.page');
-const SchedulePage = require('./schedule.page');
-const DoctorsPage = require('./doctors.page');
-const PatientsPage = require('./patients.page');
-const PreferencePage = require('./preference.page');
-const AboutPage = require('./about.page');
+const BasePage = require("./base.page");
+const DashboardPage = require("./dashboard.page");
+const SchedulePage = require("./schedule.page");
+const DoctorsPage = require("./doctors.page");
+const PatientsPage = require("./patients.page");
+const PreferencePage = require("./preference.page");
+const AboutPage = require("./about.page");
 
 function pageFactory(name) {
   const items = {
