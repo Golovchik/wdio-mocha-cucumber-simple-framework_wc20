@@ -77,7 +77,7 @@ Feature: Doctors
         When I enter 'GRGMU' into element 'Education' on page 'Doctors' on component 'Edit Doctor Modal'
         And I click on the element 'Save' on page 'Doctors' on component 'Edit Doctor Modal'
         Then I should see that element 'Education' with text 'GRGMU' on page 'Doctors' on component 'Specialist Details'
-        
+
     Scenario: Delete Doctor
 
         When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
