@@ -68,25 +68,23 @@ Feature: Doctors
     #     Then I should see a new doctor with name 'Uladzislau'
 
 
-     Scenario: Change Doctor
+    Scenario: Change Doctor
 
-        When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
-        Then I should see element 'Title' with text 'DOCTOR DETAILS' on page 'Doctors' on component 'Specialist Details'
+        When I click on 'Specialist Card' with name 'Dr. Mollie Cobb' on page 'Doctors'
+        Then I should see that element 'Title' with text 'DOCTOR DETAILS' on page 'Doctors' on component 'Specialist Details'
         And I click on the button 'Edit' on page 'Doctors' on component 'Specialist Details'
-        # Then I should see modal dialog with element 'Title' with text 'Edit Doctor' on page 'Doctors' on component 'Edit Doctor Modal'
-        #  And I enter '1111111111' into element 'Phone' on page 'Doctor' on component 'Change Doctor Modal'
-        # And I click on the element 'Save' on page 'Doctors' on component 'Change Doctor Modal'
-        # Then I should see '1111111111' into elements 'Mobile' on page 'Doctors' on component 'Specialist Details'
+        Then I should see modal dialog with 'Title' with text 'Edit Doctor' on page 'Doctors' on component 'Edit Doctor Modal'
+        When I enter 'GRGMU' into element 'Education' on page 'Doctors' on component 'Edit Doctor Modal'
+        # When I enter '1234567890' into element 'Phone' on page 'Doctors' on component 'Edit Doctor Modal'
+        And I click on the element 'Save' on page 'Doctors' on component 'Edit Doctor Modal'
+        Then I should see that element 'Education' with text 'GRGMU' on page 'Doctors' on component 'Specialist Details'
+        # Then I should see that element 'Mobile' with text '(123) 456-7890' on page 'Doctors' on component 'Specialist Details'
 
-
-   Scenario: Delete Doctor
+    Scenario: Delete Doctor
 
         When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
-        Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
+        Then I should see this 'Title' on page 'Doctors' on component 'Specialist Details'
         And I click on the button 'Delete' on page 'Doctors' on component 'Specialist Details'
         And I click on the button 'Ok' on page 'Doctors' on component 'Delete Doctor Modal'
         And I click on the 'Doctors' item in the menu
- #      Then I should not see element 'Specialist Card' with name 'Dr. Nembo Lukeni'  on page 'Doctors' 
-
-
-
+        # Then I should not see element 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
