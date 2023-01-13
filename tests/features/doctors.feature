@@ -1,24 +1,25 @@
-@Uladzislau_2
+@doctors @smoke
 Feature: Doctors
 
+    @Uladzislau
     Background:
         Given I open the browser is at the 'Dashboard' page
         And I click on the 'Doctors' item in the menu
 
-    # Scenario: Creating a new doctor
+    Scenario: Creating a new doctor
 
-    #     When I click on the element 'Add New Doctor' on page 'Doctors' on component 'List Header'
-    #     Then I should see modal dialog with title 'New Doctor' on page 'Doctors' on component 'New Doctor Modal'
+        When I click on the element 'Add New Doctor' on page 'Doctors' on component 'List Header'
+        Then I should see modal dialog with title 'New Doctor' on page 'Doctors' on component 'New Doctor Modal'
 
-    #     When I enter 'Uladzislau' into element 'Name' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I click on the element 'Gender Male' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I enter '1111111111' into element 'Phone' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I enter 'q@mail.ru' into element 'Email' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I enter '1234' into element 'Education' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I click on '5+ years' element in 'Experience' list on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I enter 'Practitioner' into element 'Designation' on page 'Doctors' on component 'New Doctor Modal'
-    #     And  I click on the element 'Save' on page 'Doctors' on component 'New Doctor Modal'
-    #     Then I should see for doctors 'Dr. Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
+        When I enter 'Uladzislau' into element 'Name' on page 'Doctors' on component 'New Doctor Modal'
+        And  I click on the element 'Gender Male' on page 'Doctors' on component 'New Doctor Modal'
+        And  I enter '1111111111' into element 'Phone' on page 'Doctors' on component 'New Doctor Modal'
+        And  I enter 'q@mail.ru' into element 'Email' on page 'Doctors' on component 'New Doctor Modal'
+        And  I enter '1234' into element 'Education' on page 'Doctors' on component 'New Doctor Modal'
+        And  I click on '5+ years' element in 'Experience' list on page 'Doctors' on component 'New Doctor Modal'
+        And  I enter 'Practitioner' into element 'Designation' on page 'Doctors' on component 'New Doctor Modal'
+        And  I click on the element 'Save' on page 'Doctors' on component 'New Doctor Modal'
+        Then I should see for doctors 'Dr. Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
 
     # Scenario: Check buttons and fields on the "Doctors" page
 
@@ -67,7 +68,7 @@ Feature: Doctors
     #     And I click button "Save"
     #     Then I should see a new doctor with name 'Uladzislau'
 
-
+    @Morozova
     Scenario: Change Doctor
 
         When I click on 'Specialist Card' with name 'Dr. Mollie Cobb' on page 'Doctors'
@@ -77,7 +78,7 @@ Feature: Doctors
         When I enter 'GRGMU' into element 'Education' on page 'Doctors' on component 'Edit Doctor Modal'
         And I click on the element 'Save' on page 'Doctors' on component 'Edit Doctor Modal'
         Then I should see that element 'Education' with text 'GRGMU' on page 'Doctors' on component 'Specialist Details'
-
+    @Morozova
     Scenario: Delete Doctor
 
         When I click on 'Specialist Card' with name 'Dr. Nembo Lukeni' on page 'Doctors'
