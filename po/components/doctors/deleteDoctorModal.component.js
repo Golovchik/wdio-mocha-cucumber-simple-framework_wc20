@@ -1,16 +1,16 @@
-const { info } = require('winston');
+// const {info} = require('winston');
 const DialogModalComponent = require('../common/dialogModal.component');
 
 class DeleteDoctorModalComponent extends DialogModalComponent {
   constructor() {
     super(`ejs-dialog[header='Doctor Details']`);
   }
-  info(name) {
+  item(name) {
     const selectors = {
-  ok: "//*[text()='Ok']",
-   
-}
-return this.rootEl.$(selectors[name]);
+      ok: '//*[text()=\'Ok\']',
+
+    };
+    return this.rootEl.$(selectors[name]);
   }
 }
 

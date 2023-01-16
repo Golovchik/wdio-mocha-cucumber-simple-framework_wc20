@@ -1,18 +1,18 @@
-const { pageFactory } = require("../../po/pages/index");
+const {pageFactory} = require('../../po/pages/index');
 
-const { getConvertTextToVariable } = require("../helpers");
+const {getConvertTextToVariable} = require('../helpers');
 
 const clickElementWithWait = async (element) => {
-  await element.waitForClickable({ timeout: 5000 });
+  await element.waitForClickable({timeout: 5000});
   await element.click();
 };
 const doubleClickElementWithWait = async (element) => {
-  await element.waitForClickable({ timeout: 5000 });
+  await element.waitForClickable({timeout: 5000});
   await element.doubleClick();
 };
 
 const getElement = async (element, page, component) => {
-  element = await getConvertTextToVariable(element); 
+  element = await getConvertTextToVariable(element);
   const currentComponent = await getComponent(page, component);
   const currentElement = await currentComponent.item(element);
   return currentElement;
@@ -23,7 +23,6 @@ const getComponent = async (page, component) => {
   const currentComponent = await pageFactory(page)[component];
   return currentComponent;
 };
-
 const getPage = async (page) => {
   const currentPage = await pageFactory(page);
   return currentPage;

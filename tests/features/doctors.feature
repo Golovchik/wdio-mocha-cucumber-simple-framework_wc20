@@ -1,11 +1,10 @@
 @doctors @smoke
 Feature: Doctors
 
-    @Uladzislau
     Background:
         Given I open the browser is at the 'Dashboard' page
         And I click on the 'Doctors' item in the menu
-
+    @Uladzislau
     Scenario: Creating a new doctor
 
         When I click on the element 'Add New Doctor' on page 'Doctors' on component 'List Header'

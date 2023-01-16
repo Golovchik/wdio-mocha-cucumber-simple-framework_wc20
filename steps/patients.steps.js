@@ -47,18 +47,18 @@ Then(
     },
 );
 
-// Then(
-//     /^I should see patients '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
-//     async (text, element, page, component) => {
-//       element = await getConvertTextToVariable(element);
-//       const currentElement = await pageFactory(page)
-//           .clientCard(this.name)
-//           .item(element);
-//       await checkElementIsDisplayed(currentElement);
-//       const currentText = await currentElement.getText();
-//       await expect(currentText).toEqual(text);
-//     },
-// );
+Then(
+    /^I should see patients '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (text, element, page, component) => {
+      element = await getConvertTextToVariable(element);
+      const currentElement = await pageFactory(page)
+          .clientCard(this.name)
+          .item(element);
+      await checkElementIsDisplayed(currentElement);
+      const currentText = await currentElement.getText();
+      await expect(currentText).toEqual(text);
+    },
+);
 
 Then(
     /^I should see patient with mobile number '([^"]*)' on the element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
@@ -68,6 +68,19 @@ Then(
       const currentElement = await pageFactory(page)
           .clientCard(text)
           .item(element);
+      await clickElementWithWait(currentElement);
+    },
+);
+
+When(
+    /^I will click on this '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (element, page, component) => {
+      const newElement = getConvertTextToVariable(element);
+      const pageComponent = await getConvertTextToVariable(component);
+      const currentPage = await pageFactory(page);
+      const currComponent = await currentPage[pageComponent];
+      const currentElement = currComponent.item(newElement);
+
       await clickElementWithWait(currentElement);
     },
 );
