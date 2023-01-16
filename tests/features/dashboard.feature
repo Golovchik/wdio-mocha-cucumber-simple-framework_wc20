@@ -18,7 +18,7 @@ Feature: User Flow on 'Dashboard' page
         And  I click on the 'Dashboard' item in the menu
         Then I should see availability doctor with name 'Dr.Uladzislau' on page Dashboard on component 'Doctors Availability'
 
-   @Aislu
+    @Aislu
     Scenario: Check buttons, fields and cells on the 'Dashboard' page
 
         When I click on the 'Dashboard' item in the menu

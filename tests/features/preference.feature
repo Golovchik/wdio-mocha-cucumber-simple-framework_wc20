@@ -20,7 +20,7 @@ Feature: User Flow on 'Preference' page
         And I should see text 'Department Colors' into elements 'Booking Color Input' on page 'Preference' on component 'Settings'
         And I should see text 'Friday' into elements 'First Day Of Week Input' on page 'Preference' on component 'Settings'
 
-     @Aislu
+    @Aislu
     Scenario: Fill the fields on "Preference" page
 
         When I click on the 'Preference' item in the menu

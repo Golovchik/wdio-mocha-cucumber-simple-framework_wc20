@@ -20,7 +20,6 @@ Feature: User Flow on 'Patients' page
 
     @Aislu
     Scenario: Check buttons and fields on the "Patients" page
-           
         When I click on the 'Patients' item in the menu
         Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients'
 

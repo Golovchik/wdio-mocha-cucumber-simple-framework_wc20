@@ -22,9 +22,8 @@ Feature: Doctors
 
     @Aislu
     Scenario: Check buttons and fields on the "Doctors" page
-       
-       When I click on the 'Doctors' item in the menu
-       Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors'
+        When I click on the 'Doctors' item in the menu
+        Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors'
 
 
 
