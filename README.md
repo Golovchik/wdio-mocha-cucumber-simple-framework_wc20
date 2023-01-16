@@ -91,3 +91,5 @@
 5. Created in folder "steps/dashboard" files: (given,then,when).js
 6. created in folder "tests/features" files: (menuNavigation).feature
 7. Created in folder "tests/specs" files: e2e.spec.js (for simple testing)
+
+//delete
