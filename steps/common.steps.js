@@ -64,6 +64,7 @@ Then(
     },
 );
 
+// Then I should see text '11111111' into elements 'Mobile' on page 'Doctors' on component 'Change Doctor Modal'
 Then(
     /^I should see text '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (text, element, page, component) => {
