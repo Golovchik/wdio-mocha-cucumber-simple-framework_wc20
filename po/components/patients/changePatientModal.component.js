@@ -7,13 +7,14 @@ class ChangePatientModalComponent extends DialogModalComponent {
 
   item(name) {
     const selectors = {
-      title: this.title,
+      title: '#_title',
       close: this.close,
       cancel: this.cancel,
       save: this.save,
+      newPatient: '//*[text()=\'New Patient\']',
       name: 'input[name=Name]',
-      genderMale: 'label[for=patientCheckMale]',
-      genderFemale: 'label[for=patientCheckFemale]',
+      genderMale: '//label[text()="Male"]',
+      genderFemale: '//label[text()="Female"]',
       dob: '.e-date-icon',
       bloodGroup: '.e-ddl-icon',
       mobile: '#PatientMobile',

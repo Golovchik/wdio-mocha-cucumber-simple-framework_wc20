@@ -53,7 +53,6 @@ Then(/^I should have page url '([^"]*)'$/, async (url) => {
   await expect(currentUrl).toEqual(url);
 });
 
-// Then I should see modal dialog with title 'New Doctor' on page 'Doctors/Patients' on component 'New Doctor Modal'
 Then(
     /^I should see modal dialog with title '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (title, page, component) => {
@@ -72,6 +71,7 @@ Then(
     },
 );
 
+// Then I should see text '11111111' into elements 'Mobile' on page 'Doctors' on component 'Change Doctor Modal'
 Then(
     /^I should see text '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (text, element, page, component) => {

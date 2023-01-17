@@ -1,4 +1,4 @@
-@preference
+@preference @smoke
 Feature: User Flow on 'Preference' page
 
     Background:
@@ -25,6 +25,3 @@ Feature: User Flow on 'Preference' page
 
         When I click on the 'Preference' item in the menu
         Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/preference'
-
-
-

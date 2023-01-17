@@ -7,7 +7,7 @@ class ClientDetailsComponent extends BaseComponent {
 
   item(name) {
     const selectors = {
-      title: 'div.e-dlg-header',
+      title: '//*[@id=\'grid_1627125836_0_dialogEdit_wrapper_title\']',
       close: '.e-dlg-closeicon-btn',
       delete: 'button.delete-patient',
       edit: 'button.edit-patient',

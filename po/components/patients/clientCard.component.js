@@ -1,4 +1,4 @@
-const BaseComponent = require("../common/base.component");
+const BaseComponent = require('../common/base.component');
 
 class ClientCardComponent extends BaseComponent {
   constructor(number) {
@@ -7,17 +7,18 @@ class ClientCardComponent extends BaseComponent {
 
   item(name) {
     const selectors = {
-      id: "td[aria-label$='ID']",
-      name: "td[aria-label$='Name']",
-      nameLink: "td[aria-label$='Name'] span",
-      gender: "td[aria-label$='Gender']",
-      bloodGroup: "td[aria-label$='Blood Group']",
-      symptoms: "td[aria-label$='Symptoms']",
-      mobileNumber: "td[aria-label$='Mobile Number']",
-      email: "td[aria-label$='Email']",
+      id: 'td[aria-label$=\'ID\']',
+      name: 'td[aria-label$=\'Name\']',
+      nameLink: 'td[aria-label$=\'Name\'] span',
+      gender: 'td[aria-label$=\'Gender\']',
+      bloodGroup: 'td[aria-label$=\'Blood Group\']',
+      symptoms: 'td[aria-label$=\'Symptoms\']',
+      mobileNumber: 'td[aria-label$=\'Mobile Number\']',
+      email: 'td[aria-label$=\'Email\']',
     };
     return this.rootEl.$(selectors[name]);
   }
 }
 
 module.exports = ClientCardComponent;
+

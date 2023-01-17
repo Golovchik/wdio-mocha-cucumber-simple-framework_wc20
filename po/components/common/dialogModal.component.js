@@ -18,7 +18,7 @@ class DialogModalComponent extends BaseComponent {
   }
 
   get save() {
-    return '.button-container button.e-primary';
+    return '//*[text()="Save"]';
   }
 }
 

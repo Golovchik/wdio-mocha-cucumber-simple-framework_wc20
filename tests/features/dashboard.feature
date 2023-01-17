@@ -1,4 +1,4 @@
-@dashboard
+@dashboard @smoke
 Feature: User Flow on 'Dashboard' page
 
     Background:
