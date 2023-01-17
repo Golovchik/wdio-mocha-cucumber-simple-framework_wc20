@@ -1,7 +1,7 @@
 const BaseComponent = require('../common/base.component');
 
 class ListComponentsComponent extends BaseComponent {
-  constructor(id) {
+  constructor() {
     super(`.about-component`);
   }
 

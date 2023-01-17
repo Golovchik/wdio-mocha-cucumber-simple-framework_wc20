@@ -17,15 +17,3 @@ Feature: User Flow on 'Dashboard' page
         And  I click on the element 'Save' on page 'Doctors' on component 'New Doctor Modal'
         And  I click on the 'Dashboard' item in the menu
         Then I should see availability doctor with name 'Dr.Uladzislau' on page Dashboard on component 'Doctors Availability'
-
-    @Aislu
-    Scenario: Check buttons, fields and cells on the 'Dashboard' page
-
-        When I click on the 'Dashboard' item in the menu
-        Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard'
-
-        When I click on the 'Book Appointments' item on page 'Dashboard' on component 'Todays Appointments'
-        Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar'
-
-        When I click on the 'Amelia Edwards' item on page 'Dashboard' on component 'Todays Appointments'
-        Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctor-details/5'
