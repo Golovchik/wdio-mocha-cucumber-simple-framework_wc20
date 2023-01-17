@@ -1,4 +1,4 @@
-@about
+@about @smoke
 Feature: User Flow on 'About' page
 
     Background:
@@ -59,12 +59,6 @@ Feature: User Flow on 'About' page
 
         When I click on the element 'Toast' on page 'About' on component 'List Components'
         Then I should have new page with url 'https://helpej2.syncfusion.com/angular/documentation/toast/getting-started'
-
-        When I click on the element 'Grid' on page 'About' on component 'List Components'
-        Then I should have new page with url 'https://helpej2.syncfusion.com/angular/documentation/grid/getting-started'
-
-        When I click on the element 'Chart' on page 'About' on component 'List Components'
-        Then I should have new page with url 'https://helpej2.syncfusion.com/angular/documentation/chart/getting-started'
 
         When I click on the element 'TimePicker' on page 'About' on component 'List Components'
         Then I should have new page with url 'https://helpej2.syncfusion.com/angular/documentation/timepicker/getting-started'

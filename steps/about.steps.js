@@ -1,7 +1,6 @@
 const {Then} = require('@cucumber/cucumber');
 const {getPage} = require('../support/actions/cooperations');
 
-// Then I should have new page with url "pageUrl"
 Then(/^I should have new page with url '([^"]*)'$/, async (url) => {
   await browser.switchWindow(url);
   const currentPage = await getPage('Base');

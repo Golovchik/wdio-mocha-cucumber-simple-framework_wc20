@@ -9,7 +9,7 @@ class SpecialistDetailsComponent extends BaseComponent {
     return this.rootEl.$(`//div[text()='${day}']/following-sibling::div`);
   }
 
-  info(name) {
+  item(name) {
     const selectors = {
       delete: 'button.delete-details',
       edit: 'button.edit-details',
@@ -21,6 +21,7 @@ class SpecialistDetailsComponent extends BaseComponent {
       experience: '.experience',
       availability: '.available-days',
       mobile: '.mobile',
+      title: 'div.title',
     };
     return this.rootEl.$(selectors[name]);
   }

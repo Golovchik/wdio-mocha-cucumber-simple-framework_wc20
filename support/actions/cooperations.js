@@ -6,7 +6,6 @@ const clickElementWithWait = async (element) => {
   await element.waitForClickable({timeout: 5000});
   await element.click();
 };
-
 const doubleClickElementWithWait = async (element) => {
   await element.waitForClickable({timeout: 5000});
   await element.doubleClick();
@@ -24,7 +23,6 @@ const getComponent = async (page, component) => {
   const currentComponent = await pageFactory(page)[component];
   return currentComponent;
 };
-
 const getPage = async (page) => {
   const currentPage = await pageFactory(page);
   return currentPage;

@@ -55,7 +55,9 @@
 
 ## [TA] add allure config
 
-1.  npm install @wdio/allure-reporter --save-dev.
+1. npm install @wdio/allure-reporter --save-dev
+2. npm i allure-commandline
+3. "allureReport": "allure generate --clean ./allure-results -o ./allure-report && allure open ./allure-report"
 
 ## [TA] add winston
 
@@ -81,15 +83,3 @@
 1. npm install @wdio/cucumber-framework --save-dev
 2. created file wdio.cucumber.conf.js
 3. moved files wdio.\*\conf.js to configs
-
-## [TA] add TAF structure (base PO)
-
-1. Created in folder "pages" files: (base,about,dashboard,doctors,patients,preference,schedule).page.js, index.js.
-2. Created in folder "components/common" files: (base,header,sidemenu).component.js
-3. created in folder "components/dashboard" files: (consultation,doctorsAvailability,todaysAppointnments).component.js
-4. Created in folder "components/schedule" files: (chooseSpecialist,filter,slot,waitingList).component.js
-5. Created in folder "steps/dashboard" files: (given,then,when).js
-6. created in folder "tests/features" files: (menuNavigation).feature
-7. Created in folder "tests/specs" files: e2e.spec.js (for simple testing)
-
-//delete

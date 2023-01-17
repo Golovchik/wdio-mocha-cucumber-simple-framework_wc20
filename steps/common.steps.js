@@ -48,6 +48,15 @@ Then(/^I should have page url '([^"]*)'$/, async (url) => {
 });
 
 Then(
+    /^I should see modal dialog with title '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
+    async (title, page, component) => {
+      const currentElement = await getElement('title', page, component);
+      const currenTitle = await currentElement.getText();
+      await expect(currenTitle).toEqual(title);
+    },
+);
+
+Then(
     /^I should see element '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
       const currentElement = await getElement(element, page, component);
@@ -60,15 +69,5 @@ Then(
     async (text, element, page, component) => {
       const currentText = await getValueFromElement(element, page, component);
       await expect(currentText).toEqual(text);
-    },
-);
-
-// Then I should see modal dialog with title 'New Doctor' on page 'Doctors/Patients' on component 'New Doctor Modal'
-Then(
-    /^I should see modal dialog with title '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
-    async (title, page, component) => {
-      const currentElement = await getElement('title', page, component);
-      const currenTitle = await currentElement.getText();
-      await expect(currenTitle).toEqual(title);
     },
 );

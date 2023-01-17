@@ -79,7 +79,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "error",
+  logLevel: "warn",
   //
   // Set specific log levels per logger
   // loggers:
@@ -141,7 +141,15 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ["spec"],
+  reporters: [
+    "spec",
+    [
+      "allure",
+      {
+        outputDir: "./configs/reports/allure-results",
+      },
+    ],
+  ],
 
   //
   // Options to be passed to Mocha.
@@ -288,7 +296,7 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function(exitCode, config, capabilities, results) {
+  // onComplete: function (exitCode, config, capabilities, results) {
   // },
   /**
    * Gets executed when a refresh happens.

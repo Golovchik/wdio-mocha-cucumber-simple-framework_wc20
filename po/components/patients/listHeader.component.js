@@ -7,7 +7,8 @@ class ListHeaderComponent extends BaseComponent {
 
   item(name) {
     const selectors = {
-      addNewPatien: 'button.e-control',
+      addNewPatient: '//*[text()="Add New Patient"]',
+      searchPatient: '#schedule_searchbar',
     };
     return this.rootEl.$(selectors[name]);
   }

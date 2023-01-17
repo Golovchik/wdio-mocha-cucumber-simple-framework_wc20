@@ -15,23 +15,20 @@ class PatientsPage extends BasePage {
     this.clientDetails = new ClientDetailsComponent();
     this.deletePatientModal = new DeletePatientModalComponent();
 
-    //
     this.patientQueryPart = '//*[text()';
     this.searchPatientString = 'editing-view-port';
     this.addNewButton = '//*[@class=\'add-patient-label\']';
     this.patientName = '//*[@class=\'patient-name\']';
-    //
   }
 
   clientCard(number) {
     return new ClientCardComponent(number);
   }
 
-  //
+
   getPatient(name) {
     return this.rootEl.$(`${patientQueryPart}='${name}']`);
   }
-  //
 }
 
 module.exports = PatientsPage;

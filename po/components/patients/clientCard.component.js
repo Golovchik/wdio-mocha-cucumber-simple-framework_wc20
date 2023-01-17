@@ -21,3 +21,4 @@ class ClientCardComponent extends BaseComponent {
 }
 
 module.exports = ClientCardComponent;
+

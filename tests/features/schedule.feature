@@ -1,4 +1,4 @@
-@schedule
+@schedule @smoke
 Feature: User Flow on 'Schedule' page
 
     Background:
@@ -34,11 +34,9 @@ Feature: User Flow on 'Schedule' page
         When I click on the element 'Timeline Month' on page 'Schedule' on component 'Filter'
         Then I should see text of preiod as 'August 2020' into elements 'Period Representation' on page 'Schedule' on component 'Filter'
 
+
     @Aislu
     Scenario: Check buttons, fields and cells on the "Schedule" page
 
         When I click on the 'Schedule' item in the menu
         Then I should have page url 'https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar'
-
-
-
