@@ -4,11 +4,9 @@ const {getConvertTextToVariable} = require('../support/helpers');
 const {checkElementIsDisplayed} = require('../support/assertions/expects');
 const {
   getComponent,
-  // getElement,
   clickElementWithWait,
 } = require('../support/actions/cooperations');
 
-// Then I should see for doctors 'Uladzislau' into elements 'Name' on page 'Doctors' on component 'Specialist Card'
 Then(
     /^I should see for doctors '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (text, element, page, component) => {
@@ -41,7 +39,6 @@ Then(
     },
 );
 
-// And I click on the button 'Edit' on page 'Doctors' on component 'Specialist Details'
 When(
     /^I click on the button '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
@@ -54,7 +51,6 @@ When(
     },
 );
 
-// I should see modal dialog with  'Title' with text 'Edit Doctor' on page 'Doctors' on component 'Edit Doctor Modal'
 Then(
     /^I should see modal dialog with '([^"]*)' with text '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, text, page, component) => {
@@ -71,13 +67,11 @@ When(
     async (element, page, component) => {
       const pageComponent = await getConvertTextToVariable(component);
       const currentPage = await pageFactory(page);
-
       const currComponent = await currentPage[pageComponent];
       await clickElementWithWait(currComponent.item(element));
     },
 );
 
-// Then I should see element 'Title' on page 'Doctors' on component 'Specialist Details'
 Then(
     /^I should see this '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, page, component) => {
@@ -88,7 +82,6 @@ Then(
     },
 );
 
-// Then I should not see doctor with name 'Dr. Nembo Lukeni' on page 'Doctors' on component "Specialist Card"
 Then(
     /^I should not see doctor with name '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (name, page, component) => {

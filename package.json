@@ -10,7 +10,8 @@
     "gherkin-lint": "gherkin-lint -c .gherkin-lintrc ./tests/features/",
     "wdio": "wdio run ./configs/wdio.conf.js",
     "wdio:cucumber": "wdio run ./configs/wdio.cucumber.conf.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "allureReport": "allure generate --clean ./configs/reports/allure-results -o ./configs/reports/allure-report && allure open ./configs/reports/allure-report"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "winston": "^3.8.2"
   },
   "dependencies": {
+    "allure-commandline": "^2.20.1",
     "dotenv": "^16.0.3",
     "gherkin-lint": "^4.2.2"
   }

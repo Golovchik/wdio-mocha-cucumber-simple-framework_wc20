@@ -17,7 +17,6 @@ When(
     },
 );
 
-// Then I should see for patients 'Ul' into elements 'Name' on page 'Patients' on component 'Client Card'
 Then(
     /^I should see for patients '([^"]*)' into elements '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (text, element, page, component) => {
@@ -31,7 +30,6 @@ Then(
     },
 );
 
-// Then I should see text 'Anna' into element 'Name' and text '1111111111' into element 'Mobile' on page 'Patients' on component 'Client Card'
 Then(
     /^I should see text '([^"]*)' into element '([^"]*)' and text '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (nameText, nameElement, mobileText, page, component) => {

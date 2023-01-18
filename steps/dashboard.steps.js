@@ -2,7 +2,6 @@ const {Then} = require('@cucumber/cucumber');
 const {getComponent} = require('../support/actions/cooperations');
 const {checkElementIsDisplayed} = require('../support/assertions/expects');
 
-// Then I should see availability doctor with name '' on page Dashboard on component 'Doctors Availability'
 Then(
     /^I should see availability doctor with name '([^"]*)' on page Dashboard on component '([^"]*)'$/,
     async (text, component) => {
