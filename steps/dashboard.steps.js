@@ -7,7 +7,9 @@ Then(
     async (text, component) => {
       const currentComponent = await getComponent('Dashboard', component);
       const currentElement = await currentComponent.getDoctorByName(text);
-      const listviewTemplateElement = currentComponent.item('listviewTemplate');
+      const listviewTemplateElement = await currentComponent.item(
+          'listviewTemplate',
+      );
       await listviewTemplateElement.scrollIntoView();
       await checkElementIsDisplayed(currentElement);
     },
