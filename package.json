@@ -11,7 +11,7 @@
     "wdio": "wdio run ./configs/wdio.conf.js",
     "wdio:cucumber": "wdio run ./configs/wdio.cucumber.conf.js",
     "prepare": "husky install",
-    "allureReport": "allure generate --clean ./configs/reports/allure-results -o ./configs/reports/allure-report && allure open ./configs/reports/allure-report"
+    "allureReport": "allure generate configs/reports/allure-results/ --clean && allure open"
   },
   "repository": {
     "type": "git",

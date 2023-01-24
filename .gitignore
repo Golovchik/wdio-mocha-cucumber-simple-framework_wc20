@@ -1,6 +1,6 @@
 #https://www.atlassian.com/ru/git/tutorials/saving-changes/gitignore
 node_modules
 .env
-configs/reports/allure-report
+allure-report
 configs/reports/allure-results
 .vscode

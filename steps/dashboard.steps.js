@@ -10,7 +10,10 @@ Then(
       const listviewTemplateElement = await currentComponent.item(
           'listviewTemplate',
       );
-      await listviewTemplateElement.scrollIntoView();
+      await listviewTemplateElement.scrollIntoView({
+        block: 'center',
+        inline: 'center',
+      });
       await checkElementIsDisplayed(currentElement);
     },
 );
