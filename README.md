@@ -100,3 +100,4 @@
 1. npm install @wdio/sauce-service --save-dev
 2. maybe npm audit fix --force
 3. npm run wdio:saucelabs
+4.
