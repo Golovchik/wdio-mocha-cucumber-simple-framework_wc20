@@ -100,4 +100,8 @@
 1. npm install @wdio/sauce-service --save-dev
 2. maybe npm audit fix --force
 3. npm run wdio:saucelabs
-4.
+
+## [TA] сreate HTTP handler
+
+1. npm i axios chai
+2. npm install wdio-mochawesome-reporter

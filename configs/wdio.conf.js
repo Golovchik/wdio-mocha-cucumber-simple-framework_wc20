@@ -29,7 +29,7 @@ exports.config = {
   // will be called from there.
   //
   specs: [
-    "../tests/specs/**/*.js",
+    "../tests/specs/**/*.spec.js",
     // ToDo: define location for spec files here
   ],
   // Patterns to exclude.
@@ -145,6 +145,12 @@ exports.config = {
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: [
     "spec",
+    //[
+    //  "mochawesome",
+    //  {
+    //    outputDir: "./configs/reports/mochawesome-results",
+    //  },
+    //],
     [
       "allure",
       {
@@ -298,8 +304,10 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {<Object>} results object containing test results
    */
-  // onComplete: function (exitCode, config, capabilities, results) {
-  // },
+  onComplete: function (exitCode, config, capabilities, results) {
+    const mergeResults = require("wdio-mochawesome-reporter/mergeResults");
+    mergeResults("./configs/reports/mochawesome-results", "results-*");
+  },
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session

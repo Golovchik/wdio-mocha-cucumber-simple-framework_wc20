@@ -3,4 +3,5 @@ node_modules
 .env
 allure-report
 configs/reports/allure-results
+configs/reports/mochawesome-results
 .vscode
