@@ -3,12 +3,8 @@ const {TEST_URL} = require('../configs/endpoints');
 
 const sendRequest = async (method, url, data = null, headers = {}) => {
   try {
-    const response = await axios({
-      method,
-      url: `${TEST_URL}/${url}`,
-      headers: getHeaders(headers),
-      data,
-    });
+    const config = await getConfig(method, url, data, headers);
+    const response = await axios(config);
     return {
       status: response.status,
       data: response.data,
@@ -20,7 +16,17 @@ const sendRequest = async (method, url, data = null, headers = {}) => {
   }
 };
 
-function getHeaders(headers, method) {
+async function getConfig(method, url, data, headers) {
+  const config = {
+    method,
+    url: `${TEST_URL}/${url}`,
+    data,
+  };
+  config.headers = await getHeaders(headers);
+  return config;
+}
+
+async function getHeaders(headers) {
   const defaultHeaders = {
     'Content-Type': 'application/json',
   };
