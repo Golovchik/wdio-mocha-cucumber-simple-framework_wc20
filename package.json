@@ -11,7 +11,7 @@
     "wdio": "wdio run ./configs/wdio.conf.js",
     "wdio:cucumber": "wdio run ./configs/wdio.cucumber.conf.js",
     "prepare": "husky install",
-    "allureReport": "allure generate --clean ./configs/reports/allure-results -o ./configs/reports/allure-report && allure open ./configs/reports/allure-report"
+    "allureReport": "allure generate configs/reports/allure-results/ --clean && allure open"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "@wdio/spec-reporter": "^8.0.13",
     "chromedriver": "^108.0.0",
     "cucumber": "^6.0.7",
+    "edgedriver": "^4.17134.1",
     "eslint": "^8.29.0",
     "eslint-config-google": "^0.14.0",
     "geckodriver": "^3.2.0",

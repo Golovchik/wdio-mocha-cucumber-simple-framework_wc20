@@ -1,10 +1,7 @@
 require("dotenv").config();
-const yargs = require("yargs").argv;
-const { hideBin } = require("yargs/helpers");
-// const argv = yargs(hideBin(process.argv)).argv;
-// console.log(argv);
-
-
+const yargs = require("yargs");
+let browserName = yargs.argv.BROWSER_NAME || process.env.BROWSER_NAME;
+browserName = browserName || "chrome";
 exports.config = {
   //
   // ====================
@@ -82,7 +79,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "warn",
+  logLevel: "error",
   //
   // Set specific log levels per logger
   // loggers:

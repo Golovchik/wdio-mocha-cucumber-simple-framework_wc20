@@ -83,3 +83,11 @@
 1. npm install @wdio/cucumber-framework --save-dev
 2. created file wdio.cucumber.conf.js
 3. moved files wdio.\*\conf.js to configs
+
+## [TA] add multibrowser supporting
+
+1. npm install yargs --save-dev
+2. npm install geckodriver --save-dev
+3. npm install wdio-geckodriver-service --save-dev
+4. npm install edgedriver --save-dev
+5. npm install wdio-edgedriver-service --save-dev
