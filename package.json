@@ -13,7 +13,7 @@
     "wdio:saucelabs": "wdio run ./configs/wdio.sauce.conf.js",
     "prepare": "husky install",
     "allureReport": "allure generate configs/reports/allure-results/ --clean && allure open",
-    "generateMochawesome":"marge configs/reports/mochawesome-results/wdio-ma-merged.json --reportTitle 'My Project Mochawesome-Results'"
+    "generateMochawesome": "mocha --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,8 @@
     "eslint-config-google": "^0.14.0",
     "geckodriver": "^3.2.0",
     "husky": "^8.0.2",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
     "wdio-chromedriver-service": "^8.0.1",
     "wdio-edgedriver-service": "^2.1.2",
     "wdio-geckodriver-service": "^4.0.0",

@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {TEST_URL} = require('../configs/endpoints');
+const {TEST_URL} = require('../../configs/endpoints');
 
 const sendRequest = async (method, url, data = null, headers = {}) => {
   try {

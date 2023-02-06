@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {sendRequest} = require('../../support/api.helper');
+const {sendRequest} = require('../../support/api/api.helper');
 
 describe('API Test Suite', () => {
   const petId = 1;
