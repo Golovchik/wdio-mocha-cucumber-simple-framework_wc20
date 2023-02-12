@@ -91,3 +91,17 @@
 3. npm install wdio-geckodriver-service --save-dev
 4. npm install edgedriver --save-dev
 5. npm install wdio-edgedriver-service --save-dev
+6. npm run wdio:cucumber -- --BROWSER_NAME=firefox
+
+## [TA] settupping CI/CD process Jenkins or Github Actions
+
+## [TA] integration with saucelabs
+
+1. npm install @wdio/sauce-service --save-dev
+2. maybe npm audit fix --force
+3. npm run wdio:saucelabs
+
+## [TA] сreate HTTP handler
+
+1. npm i axios chai
+2. npm install wdio-mochawesome-reporter
