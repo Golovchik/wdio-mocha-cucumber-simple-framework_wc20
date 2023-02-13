@@ -1,27 +1,27 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    id: { type: "integer" },
+    id: {type: 'integer'},
     category: {
-      type: "object",
+      type: 'object',
       properties: {
-        id: { type: "integer" },
-        name: { type: "string" },
+        id: {type: 'integer'},
+        name: {type: 'string'},
       },
     },
-    name: { type: "string" },
-    photoUrls: { type: "array" },
+    name: {type: 'string'},
+    photoUrls: {type: 'array'},
     tags: {
-      type: "array",
+      type: 'array',
       items: {
-        type: "object",
+        type: 'object',
         properties: {
-          id: { type: "integer" },
-          name: { type: "string" },
+          id: {type: 'integer'},
+          name: {type: 'string'},
         },
       },
     },
-    status: { type: "string" },
+    status: {type: 'string'},
   },
   allRequired: true,
 };

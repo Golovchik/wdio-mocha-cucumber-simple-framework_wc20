@@ -30,10 +30,10 @@ When(
 Then(
     /^I should see that element '([^"]*)' with text '([^"]*)' on page '([^"]*)' on component '([^"]*)'$/,
     async (element, text, page, component) => {
-      const detail = element.toLowerCase(); 
-      const currentPage = pageFactory(page); 
-      const pageComponentName = getConvertTextToVariable(component); 
-      const pageComponent = currentPage[pageComponentName]; 
+      const detail = element.toLowerCase();
+      const currentPage = pageFactory(page);
+      const pageComponentName = getConvertTextToVariable(component);
+      const pageComponent = currentPage[pageComponentName];
       const pageTitle = await pageComponent.item(detail).getText();
       await expect(pageTitle).toEqual(text);
     },

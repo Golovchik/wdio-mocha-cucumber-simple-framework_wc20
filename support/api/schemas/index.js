@@ -1,4 +1,4 @@
-const pet = require("./petSchema");
+const pet = require('./petSchema');
 module.exports = {
   pet,
 };
