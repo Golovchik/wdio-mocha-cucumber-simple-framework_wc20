@@ -1,9 +1,7 @@
 require("dotenv").config();
 const yargs = require("yargs");
-
 let browserName = yargs.argv.BROWSER_NAME || process.env.BROWSER_NAME;
 browserName = browserName || "chrome";
-
 exports.config = {
   //
   // ====================
@@ -66,7 +64,7 @@ exports.config = {
       maxInstances: 1,
       //
       //browserName: "chrome",
-      browserName: browserName,
+      browserName: yargs.browser||"chrome",
       acceptInsecureCerts: true,
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
