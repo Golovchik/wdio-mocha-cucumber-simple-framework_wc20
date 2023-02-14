@@ -17,6 +17,12 @@ const validateSchemaByName = (name, data) => {
   return validate(data);
 };
 
+const validateResponse = async (schema, data) => {
+  const validate = jsonSchema.compile(schema);
+  return validate(data);
+};
+
 module.exports = {
   validateSchemaByName,
+  validateResponse,
 };
